@@ -88,6 +88,8 @@ h3 { color: var(--navy); }
 .contact-grid > div > p { color: var(--muted); }
 .contact-list { margin-top: 28px; }
 .contact-list p { margin: 16px 0; }
+.contact-link { color: var(--navy); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.contact-link:hover { color: #af8316; }
 .contact-form { display: grid; gap: 16px; padding: 32px; background: var(--cream); }
 .contact-form label { display: grid; gap: 6px; font-weight: 700; }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; border: 1px solid var(--line); border-radius: 3px; padding: 12px; font: inherit; }
