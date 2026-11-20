@@ -49,3 +49,4 @@ document.querySelector("#contactForm")?.addEventListener("submit", (event) => {
   document.querySelector(".form-status").textContent = "Thank you. Your inquiry has been prepared.";
   event.currentTarget.reset();
 });
+
