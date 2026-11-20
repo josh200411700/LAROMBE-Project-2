@@ -135,6 +135,17 @@ h3 { color: var(--navy); }
 .campus-gallery figure { overflow: hidden; border: 1px solid var(--line); background: var(--white); }
 .campus-gallery img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 .campus-gallery figcaption { padding: 14px 18px; color: var(--navy); font-size: 1.05rem; font-weight: 800; }
+.uniform-guidelines { margin-top: 72px; }
+.uniform-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.uniform-card { padding: 28px; border: 1px solid var(--line); border-top: 4px solid var(--gold); background: var(--white); }
+.uniform-card h3 { margin-bottom: 12px; font-size: 1.5rem; }
+.uniform-image { display: block; margin: 18px 0 22px; color: var(--navy); font-size: .82rem; font-weight: 700; }
+.uniform-image img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: var(--white); }
+.uniform-image span { display: block; margin-top: 7px; text-decoration: underline; text-underline-offset: 3px; }
+.uniform-card h4 { margin: 22px 0 8px; color: var(--navy); }
+.uniform-card ul { padding-left: 20px; color: var(--muted); }
+.uniform-card li { margin: 8px 0; }
+.uniform-description { color: var(--muted); }
 .avatar { width: 120px; height: 120px; margin-bottom: 18px; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: #f4cf68; font-size: 1.6rem; font-weight: 800; }
 
 footer { background: var(--navy-dark); color: #bac8da; padding: 52px 0 24px; }
@@ -165,7 +176,7 @@ footer { background: var(--navy-dark); color: #bac8da; padding: 52px 0 24px; }
   .hero-copy { width: 92%; padding: 50px 0; }
   .hero-visual { position: absolute; right: -30%; bottom: 0; width: 75%; opacity: .25; }
   .feature-grid, .program-grid, .faculty-grid, .split, .detail-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
-  .campus-gallery-grid { grid-template-columns: 1fr; }
+  .campus-gallery-grid, .uniform-grid { grid-template-columns: 1fr; }
   .admissions-panel, .offerings-grid, .strand-grid { grid-template-columns: 1fr; }
   .admissions-contact { align-items: flex-start; flex-direction: column; }
   .section { padding: 70px 0; }
