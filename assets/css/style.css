@@ -55,9 +55,6 @@ h3 { color: var(--navy); }
 .section-tint { background: var(--cream); }
 .section-heading { max-width: 700px; margin-bottom: 38px; }
 .section-heading.center, .center { text-align: center; margin-inline: auto; }
-.course-poster { max-width: 760px; margin: 0 auto 48px; }
-.course-poster img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 16px 40px rgba(18,48,90,.16); }
-.course-poster figcaption { margin-top: 10px; color: var(--muted); font-size: .88rem; text-align: center; }
 .feature-grid, .program-grid, .faculty-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
 .feature-card, .program-card, .faculty-grid article { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--gold); padding: 28px; }
 .feature-card span { color: #b88a17; font-weight: 800; }
@@ -73,6 +70,27 @@ h3 { color: var(--navy); }
 .program-card { min-height: 260px; }
 .program-number { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: #f4cf68; font-weight: 800; }
 .program-card a { display: inline-block; margin-top: 18px; color: var(--navy); font-weight: 800; }
+.admissions-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; margin-bottom: 52px; padding: 34px; background: var(--navy); color: var(--white); }
+.admissions-panel h2, .admissions-contact h2 { color: var(--white); }
+.admissions-panel p { margin-top: 8px; color: #dce7f4; }
+.admissions-dates { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.admissions-dates div { min-height: 100px; display: grid; align-content: center; gap: 6px; padding: 16px; border-left: 3px solid var(--gold); background: rgba(255,255,255,.08); }
+.admissions-dates span { color: #dce7f4; font-size: .84rem; }
+.admissions-dates strong { color: #f4cf68; }
+.offerings-heading { margin-bottom: 22px; }
+.offerings-heading h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
+.offerings-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.offering-card { padding: 24px; border: 1px solid var(--line); border-top: 4px solid var(--gold); background: var(--white); }
+.offering-card h3 { margin-bottom: 14px; font-size: 1.2rem; }
+.offering-card ul { padding-left: 20px; color: var(--muted); }
+.offering-card li { margin: 10px 0; padding-left: 3px; }
+.supplemental-program { margin-top: 18px; padding: 22px 24px; background: var(--cream); border-left: 4px solid var(--gold); }
+.supplemental-program h3 { margin-bottom: 6px; }
+.supplemental-program p { color: var(--muted); }
+.admissions-contact { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-top: 48px; padding: 30px; background: var(--navy-dark); color: var(--white); }
+.admissions-contact h2 { max-width: 650px; font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.admissions-contact-links { display: grid; gap: 6px; flex-shrink: 0; }
+.admissions-contact-links a { color: #f4cf68; font-weight: 700; }
 .detail-grid { display: grid; grid-template-columns: 1.4fr .6fr; gap: 60px; }
 .detail-grid article p { margin: 18px 0; color: var(--muted); }
 .detail-grid article h3 { margin-top: 26px; }
@@ -120,6 +138,7 @@ footer { background: var(--navy-dark); color: #bac8da; padding: 52px 0 24px; }
   .nav-list.open { position: absolute; left: 20px; right: 20px; top: 76px; display: grid; gap: 0; background: var(--white); box-shadow: 0 16px 35px rgba(18,48,90,.16); padding: 10px 20px; }
   .nav-list.open li { padding: 12px 0; border-bottom: 1px solid var(--line); }
   .feature-grid, .program-grid, .faculty-grid { grid-template-columns: 1fr 1fr; }
+  .offerings-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 760px) {
@@ -131,6 +150,8 @@ footer { background: var(--navy-dark); color: #bac8da; padding: 52px 0 24px; }
   .hero-copy { width: 92%; padding: 50px 0; }
   .hero-visual { position: absolute; right: -30%; bottom: 0; width: 75%; opacity: .25; }
   .feature-grid, .program-grid, .faculty-grid, .split, .detail-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+  .admissions-panel, .offerings-grid { grid-template-columns: 1fr; }
+  .admissions-contact { align-items: flex-start; flex-direction: column; }
   .section { padding: 70px 0; }
   .split, .detail-grid, .contact-grid { gap: 38px; }
   .image-panel { min-height: 340px; }
