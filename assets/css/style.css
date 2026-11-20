@@ -130,6 +130,11 @@ h3 { color: var(--navy); }
 .event-date { min-height: 110px; display: grid; place-content: center; text-align: center; background: var(--navy); color: var(--white); }
 .event-date strong { color: #f4cf68; }
 .event-grid p { color: var(--muted); }
+.campus-gallery { margin-top: 72px; }
+.campus-gallery-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.campus-gallery figure { overflow: hidden; border: 1px solid var(--line); background: var(--white); }
+.campus-gallery img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.campus-gallery figcaption { padding: 14px 18px; color: var(--navy); font-size: 1.05rem; font-weight: 800; }
 .avatar { width: 120px; height: 120px; margin-bottom: 18px; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: #f4cf68; font-size: 1.6rem; font-weight: 800; }
 
 footer { background: var(--navy-dark); color: #bac8da; padding: 52px 0 24px; }
@@ -160,6 +165,7 @@ footer { background: var(--navy-dark); color: #bac8da; padding: 52px 0 24px; }
   .hero-copy { width: 92%; padding: 50px 0; }
   .hero-visual { position: absolute; right: -30%; bottom: 0; width: 75%; opacity: .25; }
   .feature-grid, .program-grid, .faculty-grid, .split, .detail-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+  .campus-gallery-grid { grid-template-columns: 1fr; }
   .admissions-panel, .offerings-grid, .strand-grid { grid-template-columns: 1fr; }
   .admissions-contact { align-items: flex-start; flex-direction: column; }
   .section { padding: 70px 0; }
