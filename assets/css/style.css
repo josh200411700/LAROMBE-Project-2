@@ -55,6 +55,9 @@ h3 { color: var(--navy); }
 .section-tint { background: var(--cream); }
 .section-heading { max-width: 700px; margin-bottom: 38px; }
 .section-heading.center, .center { text-align: center; margin-inline: auto; }
+.course-poster { max-width: 760px; margin: 0 auto 48px; }
+.course-poster img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 16px 40px rgba(18,48,90,.16); }
+.course-poster figcaption { margin-top: 10px; color: var(--muted); font-size: .88rem; text-align: center; }
 .feature-grid, .program-grid, .faculty-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
 .feature-card, .program-card, .faculty-grid article { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--gold); padding: 28px; }
 .feature-card span { color: #b88a17; font-weight: 800; }
