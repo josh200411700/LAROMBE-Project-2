@@ -88,18 +88,10 @@
     }
 
     .brand-mark {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: var(--navy);
-      border: 3px solid var(--gold);
-      display: grid;
-      place-items: center;
-      color: var(--gold-light);
-      font-family: Georgia, serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      box-shadow: 0 5px 16px rgba(18, 48, 90, 0.14);
+      width: 60px;
+      height: 60px;
+      display: block;
+      object-fit: contain;
     }
 
     .brand-name {
@@ -415,21 +407,13 @@
     }
 
     .mission-visual::after {
-      content: "KCC";
+      content: "";
       position: absolute;
       left: 32px;
       top: 30px;
-      width: 92px;
-      height: 92px;
-      display: grid;
-      place-items: center;
-      border: 5px solid var(--gold);
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--gold-light);
-      font-family: "Manrope", sans-serif;
-      font-size: 1.35rem;
-      font-weight: 800;
+      width: 140px;
+      height: 140px;
+      background: url("assets/images/kcc-logo.png") center / contain no-repeat;
     }
 
     .mission-copy p {
@@ -670,10 +654,7 @@
         font-size: 0.88rem;
       }
 
-      .brand-mark {
-        width: 46px;
-        height: 46px;
-      }
+      .brand-mark { width: 50px; height: 50px; }
 
       .hero {
         min-height: 590px;
@@ -775,7 +756,7 @@
   <header class="main-header">
     <div class="container header-inner">
       <a class="brand" href="Index.html" aria-label="Kabankalan Catholic College home">
-        <span class="brand-mark">KCC</span>
+        <img class="brand-mark" src="assets/images/kcc-logo.png" alt="Kabankalan Catholic College logo">
         <span class="brand-name">Kabankalan Catholic College</span>
       </a>
 

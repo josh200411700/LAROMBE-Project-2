@@ -21,7 +21,7 @@ img { max-width: 100%; }
 .main-header { position: relative; z-index: 20; height: 88px; background: var(--white); border-bottom: 1px solid rgba(18,48,90,.08); }
 .header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-mark { width: 54px; height: 54px; border: 3px solid var(--gold); border-radius: 50%; display: grid; place-items: center; background: var(--navy); color: #f4cf68; font-weight: 800; }
+.brand-mark { width: 60px; height: 60px; display: block; object-fit: contain; }
 .brand-name { max-width: 240px; color: var(--navy); font-size: 1rem; font-weight: 800; line-height: 1.15; text-transform: uppercase; }
 .nav-list { display: flex; align-items: center; gap: 26px; list-style: none; font-weight: 700; font-size: 0.92rem; }
 .nav-list a:hover, .nav-list .active { color: #b88a17; }
@@ -47,7 +47,7 @@ h2 { color: var(--navy); font-size: clamp(2.2rem, 4vw, 3.5rem); }
 h3 { color: var(--navy); }
 .hero-copy p { max-width: 580px; margin: 22px 0 30px; color: #dfe8f3; font-size: 1.08rem; }
 .hero-visual { height: 430px; position: relative; }
-.hero-seal { position: absolute; z-index: 3; top: 18%; right: 18%; width: 112px; height: 112px; display: grid; place-items: center; border: 6px solid var(--gold); border-radius: 50%; background: var(--navy); color: #f4cf68; font-size: 1.5rem; font-weight: 800; }
+.hero-seal { position: absolute; z-index: 3; top: 18%; right: 18%; width: 142px; height: 142px; object-fit: contain; }
 .building { position: absolute; right: -5%; bottom: 0; width: 85%; height: 68%; border: 18px solid #d4e0ea; background: #91a9c0; clip-path: polygon(50% 0,100% 22%,100% 100%,0 100%,0 22%); }
 .building i { position: relative; top: 42%; display: inline-block; width: 11%; height: 34%; margin-left: 9%; background: #dce7ef; }
 
@@ -63,7 +63,7 @@ h3 { color: var(--navy); }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
 .split p { margin: 18px 0 28px; color: var(--muted); }
 .image-panel { min-height: 440px; display: grid; place-items: center; border-radius: 8px; background: linear-gradient(135deg,#dde5ed,#aebfd0); }
-.image-panel span { width: 120px; height: 120px; display: grid; place-items: center; border: 6px solid var(--gold); border-radius: 50%; background: var(--navy); color: #f4cf68; font-size: 1.8rem; font-weight: 800; }
+.image-panel img { width: min(72%, 300px); max-height: 340px; object-fit: contain; }
 
 .page-banner { min-height: 280px; display: flex; align-items: center; color: var(--white); background: linear-gradient(115deg,rgba(8,35,68,.98),rgba(18,48,90,.8)), linear-gradient(135deg,#9eb1c5,#dce6ef); }
 .page-banner h1 { font-size: clamp(3rem,6vw,5rem); }
@@ -120,7 +120,7 @@ footer { background: var(--navy-dark); color: #bac8da; padding: 52px 0 24px; }
 @media (max-width: 760px) {
   .container { width: min(100% - 30px,1180px); }
   .brand-name { max-width: 180px; font-size: .82rem; }
-  .brand-mark { width: 46px; height: 46px; }
+  .brand-mark { width: 50px; height: 50px; }
   .hero { min-height: 560px; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-copy { width: 92%; padding: 50px 0; }

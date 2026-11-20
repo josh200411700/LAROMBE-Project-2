@@ -9,7 +9,7 @@ if (header) {
       <div class="topbar-links"><a href="contact.html">Student Services</a><a href="trainers.html">Faculty</a><a href="contact.html">Contact</a></div>
     </div></div>
     <header class="main-header"><div class="container header-inner">
-      <a class="brand" href="Index.html"><span class="brand-mark">KCC</span><span class="brand-name">Kabankalan Catholic College</span></a>
+      <a class="brand" href="Index.html"><img class="brand-mark" src="assets/images/kcc-logo.png" alt="Kabankalan Catholic College logo"><span class="brand-name">Kabankalan Catholic College</span></a>
       <nav aria-label="Main navigation"><ul class="nav-list" id="navList">
         <li><a href="Index.html" data-page="Index.html">Home</a></li>
         <li><a href="about.html" data-page="about.html">About</a></li>
