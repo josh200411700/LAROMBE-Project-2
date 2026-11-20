@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kabankalan Catholic College - A community for faithful learning, purposeful growth, and service.">
+  <title>About | Kabankalan Catholic College</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #12305a;
+      --navy-dark: #0b2342;
+      --gold: #d9ad32;
+      --gold-light: #f4cf68;
+      --cream: #f7f5ef;
+      --white: #ffffff;
+      --ink: #17243a;
+      --muted: #68748a;
+      --line: #dde2e9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      background: var(--navy-dark);
+      color: #dce7f4;
+      font-size: 0.82rem;
+    }
+
+    .topbar-inner {
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .topbar-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .main-header {
+      position: relative;
+      z-index: 20;
+      height: 88px;
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid rgba(18, 48, 90, 0.08);
+    }
+
+    .header-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--navy);
+      border: 3px solid var(--gold);
+      display: grid;
+      place-items: center;
+      color: var(--gold-light);
+      font-family: Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      box-shadow: 0 5px 16px rgba(18, 48, 90, 0.14);
+    }
+
+    .brand-name {
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      line-height: 1.18;
+      max-width: 250px;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .nav-list a {
+      transition: color 180ms ease;
+    }
+
+    .nav-list a:hover,
+    .nav-list .active {
+      color: #b88a17;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 4px;
+      padding: 0 20px;
+      font-family: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy-dark);
+      box-shadow: 0 8px 20px rgba(217, 173, 50, 0.22);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 1px solid var(--navy);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin: 5px auto;
+      background: var(--navy);
+    }
+
+    .hero {
+      min-height: 610px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(8, 35, 68, 0.97) 0%, rgba(11, 42, 79, 0.92) 43%, rgba(11, 42, 79, 0.48) 72%, rgba(11, 42, 79, 0.15) 100%),
+        repeating-linear-gradient(135deg, #b6c8da 0 2px, #879eb8 2px 88px);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% 18%, rgba(244, 207, 104, 0.34), transparent 18%),
+        linear-gradient(155deg, transparent 55%, rgba(255, 255, 255, 0.09) 55.2%, transparent 56%);
+    }
+
+    .campus {
+      position: absolute;
+      right: 4%;
+      bottom: 0;
+      width: min(52%, 640px);
+      height: 78%;
+      opacity: 0.82;
+    }
+
+    .campus-roof {
+      position: absolute;
+      left: 12%;
+      bottom: 17%;
+      width: 76%;
+      height: 52%;
+      background: #aebfd0;
+      clip-path: polygon(50% 0, 100% 24%, 100% 100%, 0 100%, 0 24%);
+    }
+
+    .campus-roof::before {
+      content: "";
+      position: absolute;
+      left: 8%;
+      top: 30%;
+      width: 84%;
+      height: 70%;
+      background:
+        repeating-linear-gradient(90deg, transparent 0 42px, rgba(28, 54, 86, 0.72) 42px 64px),
+        linear-gradient(#dce7ef 0 100%);
+      border: 14px solid #dce7ef;
+    }
+
+    .campus-roof::after {
+      content: "";
+      position: absolute;
+      left: 43%;
+      top: 10%;
+      width: 14%;
+      height: 28%;
+      border-radius: 50% 50% 8% 8%;
+      background: #cfdae4;
+      border: 8px solid #dce7ef;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 54%;
+      padding: 72px 0;
+      color: var(--white);
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      color: var(--gold-light);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Manrope", sans-serif;
+    }
+
+    h1 {
+      max-width: 720px;
+      font-size: clamp(3.2rem, 5.7vw, 5.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-copy {
+      max-width: 590px;
+      margin: 24px 0 32px;
+      color: #dfe8f3;
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-actions .btn-outline {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.58);
+    }
+
+    .stats {
+      position: relative;
+      z-index: 5;
+      margin-top: -46px;
+      margin-bottom: 94px;
+    }
+
+    .stats-grid {
+      min-height: 92px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: var(--white);
+      box-shadow: 0 18px 50px rgba(21, 45, 80, 0.12);
+      border-radius: 6px;
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px;
+      border-right: 1px solid var(--line);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .stat span {
+      max-width: 100px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      margin-bottom: 38px;
+    }
+
+    .section-heading.center {
+      max-width: 680px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .section-kicker {
+      color: #af8316;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-top: 8px;
+      color: var(--navy);
+      font-size: clamp(2.2rem, 4vw, 3.7rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .mission {
+      padding: 0 0 100px;
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 78px;
+      align-items: center;
+    }
+
+    .mission-visual {
+      min-height: 520px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(18, 48, 90, 0.12), rgba(217, 173, 50, 0.1)),
+        #dde5ed;
+    }
+
+    .mission-visual::before {
+      content: "";
+      position: absolute;
+      width: 74%;
+      height: 70%;
+      right: -4%;
+      bottom: -12%;
+      border-radius: 50% 50% 0 0;
+      background:
+        repeating-linear-gradient(90deg, transparent 0 55px, rgba(18, 48, 90, 0.45) 55px 80px),
+        #aec1d2;
+      border: 26px solid #d3dee7;
+      box-shadow: -20px -12px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    .mission-visual::after {
+      content: "KCC";
+      position: absolute;
+      left: 32px;
+      top: 30px;
+      width: 92px;
+      height: 92px;
+      display: grid;
+      place-items: center;
+      border: 5px solid var(--gold);
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold-light);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .mission-copy p {
+      margin: 20px 0 26px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .value {
+      padding: 18px 14px;
+      border-top: 3px solid var(--gold);
+      background: var(--cream);
+    }
+
+    .value strong {
+      display: block;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      margin-bottom: 3px;
+    }
+
+    .value span {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .programs {
+      padding: 92px 0 100px;
+      background: var(--cream);
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .program-card {
+      position: relative;
+      min-height: 300px;
+      overflow: hidden;
+      border-radius: 6px;
+      background: var(--white);
+      border: 1px solid rgba(18, 48, 90, 0.07);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(18, 48, 90, 0.12);
+    }
+
+    .program-banner {
+      height: 118px;
+      display: grid;
+      place-items: center;
+      color: var(--gold-light);
+      background: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 2.2rem;
+    }
+
+    .program-card:nth-child(2) .program-banner {
+      background: #315985;
+    }
+
+    .program-card:nth-child(3) .program-banner {
+      background: #6d7f99;
+    }
+
+    .program-content {
+      padding: 24px;
+    }
+
+    .program-content h3 {
+      color: var(--navy);
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .program-content p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .program-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--navy);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .cta {
+      padding: 84px 0;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(11, 35, 66, 0.97), rgba(18, 48, 90, 0.86)),
+        repeating-linear-gradient(135deg, #b8c7d5 0 2px, #718da9 2px 76px);
+    }
+
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      color: var(--white);
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+    }
+
+    .cta p {
+      margin-top: 10px;
+      color: #dce6f2;
+    }
+
+    footer {
+      background: var(--navy-dark);
+      color: #bac8da;
+      padding: 52px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 38px;
+    }
+
+    .footer-brand {
+      color: var(--white);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.15rem;
+      line-height: 1.35;
+    }
+
+    .footer-about {
+      max-width: 360px;
+      margin-top: 12px;
+      font-size: 0.88rem;
+    }
+
+    .footer-grid h3 {
+      color: var(--white);
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-links {
+      list-style: none;
+      font-size: 0.86rem;
+    }
+
+    .footer-links li {
+      margin: 7px 0;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 980px) {
+      .topbar,
+      .nav-list,
+      .header-actions .btn {
+        display: none;
+      }
+
+      .main-header {
+        height: 76px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-list.open {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 76px;
+        display: grid;
+        gap: 0;
+        background: var(--white);
+        box-shadow: 0 16px 35px rgba(18, 48, 90, 0.16);
+        padding: 10px 20px;
+      }
+
+      .nav-list.open li {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero-content {
+        width: 70%;
+      }
+
+      .campus {
+        width: 56%;
+        right: -10%;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat:nth-child(2) {
+        border-right: 0;
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .mission-grid {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 30px, 1180px);
+      }
+
+      .brand-name {
+        max-width: 190px;
+        font-size: 0.88rem;
+      }
+
+      .brand-mark {
+        width: 46px;
+        height: 46px;
+      }
+
+      .hero {
+        min-height: 590px;
+      }
+
+      .hero-content {
+        width: 92%;
+        padding-top: 50px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 14vw, 4.4rem);
+      }
+
+      .campus {
+        width: 78%;
+        height: 54%;
+        right: -30%;
+        opacity: 0.28;
+      }
+
+      .stats {
+        margin-top: -36px;
+        margin-bottom: 70px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat {
+        min-height: 88px;
+      }
+
+      .mission-grid,
+      .program-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-grid {
+        gap: 38px;
+      }
+
+      .mission-visual {
+        min-height: 390px;
+      }
+
+      .values {
+        grid-template-columns: 1fr;
+      }
+
+      .program-grid {
+        gap: 16px;
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Welcome to Kabankalan Catholic College</span>
+      <div class="topbar-links">
+        <a href="#">Student Portal</a>
+        <a href="#">Faculty</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-inner">
+      <a class="brand" href="Index.html" aria-label="Kabankalan Catholic College home">
+        <span class="brand-mark">KCC</span>
+        <span class="brand-name">Kabankalan Catholic College</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-list" id="navList">
+          <li><a href="Index.html">Home</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a href="courses.html">Programs</a></li>
+          <li><a href="events.html">Campus Life</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-gold" href="contact.html">Inquire Now</a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navList" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="campus" aria-hidden="true">
+        <div class="campus-roof"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">About KCC</div>
+          <h1>Learning with purpose. Living with faith.</h1>
+          <p class="hero-copy">Kabankalan Catholic College is a community where knowledge is nurtured, character is formed, and service becomes a way of life.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#mission">Discover Our Story</a>
+            <a class="btn btn-outline" href="courses.html">Explore Programs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="College highlights">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat"><strong>Faith</strong><span>Values-centered formation</span></div>
+          <div class="stat"><strong>Learn</strong><span>Meaningful academic growth</span></div>
+          <div class="stat"><strong>Lead</strong><span>Purposeful leadership</span></div>
+          <div class="stat"><strong>Serve</strong><span>Community in action</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission" id="mission">
+      <div class="container mission-grid">
+        <div class="mission-visual" role="img" aria-label="Stylized illustration of the Kabankalan Catholic College campus"></div>
+        <div class="mission-copy">
+          <div class="section-heading">
+            <div class="section-kicker">Who We Are</div>
+            <h2>A Catholic college for a changing world.</h2>
+          </div>
+          <p>At Kabankalan Catholic College, students grow through learning, reflection, leadership, and service. We are committed to helping every learner develop the knowledge, confidence, and compassion to contribute meaningfully to society.</p>
+          <p>Grounded in Catholic values and inspired by the needs of our community, KCC creates an environment where academic excellence and human development move forward together.</p>
+          <div class="values">
+            <div class="value"><strong>Faith</strong><span>Live with integrity</span></div>
+            <div class="value"><strong>Excellence</strong><span>Pursue growth</span></div>
+            <div class="value"><strong>Service</strong><span>Serve others</span></div>
+          </div>
+          <a class="btn btn-outline" style="margin-top: 28px;" href="courses.html">View Our Programs</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs">
+      <div class="container">
+        <div class="section-heading center">
+          <div class="section-kicker">Academic Pathways</div>
+          <h2>Find the path that moves you forward.</h2>
+        </div>
+        <div class="program-grid">
+          <article class="program-card">
+            <div class="program-banner" aria-hidden="true">01</div>
+            <div class="program-content">
+              <h3>College Programs</h3>
+              <p>Explore degree programs prepared to develop practical knowledge and professional confidence.</p>
+              <a class="program-link" href="courses.html">Explore degrees &rarr;</a>
+            </div>
+          </article>
+          <article class="program-card">
+            <div class="program-banner" aria-hidden="true">02</div>
+            <div class="program-content">
+              <h3>Student Formation</h3>
+              <p>Join activities that build character, strengthen leadership, and deepen community engagement.</p>
+              <a class="program-link" href="events.html">Discover campus life &rarr;</a>
+            </div>
+          </article>
+          <article class="program-card">
+            <div class="program-banner" aria-hidden="true">03</div>
+            <div class="program-content">
+              <h3>Admissions</h3>
+              <p>Take the next step toward a meaningful college experience at Kabankalan Catholic College.</p>
+              <a class="program-link" href="contact.html">Start your inquiry &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>Your future begins with purpose.</h2>
+          <p>Learn more about KCC and take the next step in your educational journey.</p>
+        </div>
+        <a class="btn btn-gold" href="contact.html">Contact Admissions</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Kabankalan Catholic College</div>
+          <p class="footer-about">A learning community formed in faith and committed to excellence, leadership, and service.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About KCC</a></li>
+            <li><a href="courses.html">Programs</a></li>
+            <li><a href="events.html">Campus Life</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Student Resources</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">&copy; 2026 Kabankalan Catholic College. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector("#navList");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navList.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+
+    navList.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navList.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+</body>
+</html>
